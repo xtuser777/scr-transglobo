@@ -264,7 +264,9 @@
 
                             <div class="col-sm-6">
                                 <label for="btCidade">Cidade:</label>
-                                <button name="btCidade" id="btCidade" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                                <a role="button" id="btCidade" class="btn btn-default" style="width: 100%;" data-fancybox data-src="#fancyFormSelCidade" href="javascript:;">
+                                    SELECIONAR
+                                </a>
                             </div>
 
                             <input type="hidden" name="txIdCidade" id="txIdCidade" value="0" />
@@ -298,7 +300,7 @@
                                 <label for="txEmail">E-Mail:</label>
                                 <div class="input-group" style="width: 100%;">
                                     <div class="input-group-addon">@</div>
-                                    <input type="text" name="txEmail" id="txEmail" class="form-control" value="funcionario011@outlook.com" />
+                                    <input type="text" name="txEmail" id="txEmail" class="form-control" value="" />
                                 </div>
                             </div>
                         </div>
@@ -337,7 +339,7 @@
                                 <label for="txSenha">Senha:</label>
                                 <div class="input-group" style="width: 100%;">
                                     <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-                                    <input type="password" name="txSenha" id="txSenha" class="form-control" value="FUNC011123" />
+                                    <input type="password" name="txSenha" id="txSenha" class="form-control" value="" />
                                 </div>
                             </div>
 
@@ -345,7 +347,7 @@
                                 <label for="txConfSenha">Confirmar Senha:</label>
                                 <div class="input-group" style="width: 100%;">
                                     <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-                                    <input type="password" name="txConfSenha" id="txConfSenha" class="form-control" value="FUNC011123" />
+                                    <input type="password" name="txConfSenha" id="txConfSenha" class="form-control" value="" />
                                 </div>
                             </div>
                         </div>
@@ -372,65 +374,112 @@
         </div>
         <!-- Fim conteudo da pagina -->
 
-        <!-- Fancybox FORM QUESTIONÁRIO -->
-        <div style="display: none; min-width: 300px; width: 800px" id="fancyFormSelEstado">
-            <form name="formSelEstado" id="formSelEstado" action="" method="post">
+        <!-- Fancybox FORM ESTADO -->
+        <div style="display: none; min-width: 300px; width: 700px" id="fancyFormSelEstado">
+
+            <h3 style="text-align: center; font-weight: bold;">Selecionar Estado</h3>
+            <hr style="color: grey;" />
+
+            <form id="formSelEstado">
                 <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                         <div class="form-group">
-                            <label for="txSelEstadoPesquisa">FILTRO:</label>
+                            <label for="txSelEstadoPesquisa">Filtro:</label>
                             <input type="text" name="txSelEstadoPesquisa" id="txSelEstadoPesquisa" class="form-control" />
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <div class="form-group">
-                            <label for="btFiltrar">Fim:</label>
-                            <button name="btFiltrar" id="btFiltrar" class="btn btn-primary" style="width: 100%;">FILTRAR</button>
+                            <label for="btFiltrarEstado">&nbsp;</label>
+                            <button name="btFiltrarEstado" id="btFiltrarEstado" class="btn btn-primary" style="width: 100%;">FILTRAR</button>
                         </div>
                     </div>
                 </div>
-                <div class="table-container" style="height: 150px;">
+                <div class="table-container" style="height: 190px;">
                     <table name="tbEstados" id="tbEstados" class="table table-striped table-hover">
 
                         <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NOME</th>
-                            <th>SIGLA</th>
-                        </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                                <th>SIGLA</th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </tbody>
 
                     </table>
                 </div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <button name="btCancelar" id="btCancelar" class="btn btn-danger">Cancelar</button>
+                        <button name="btCancelarEstado" id="btCancelarEstado" class="btn btn-danger" style="width: 100%;" onclick="$.fancybox.close();">Cancelar</button>
                     </div>
 
                     <div class="col-sm-6"></div>
 
                     <div class="col-sm-3">
-                        <button name="btConfirmar" id="btConfirmar" class="btn btn-success">Confirmar</button>
+                        <button name="btConfirmarEstado" id="btConfirmarEstado" class="btn btn-success" style="width: 100%;">Confirmar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Fancybox FORM CIDADE -->
+        <div style="display: none; min-width: 300px; width: 700px" id="fancyFormSelCidade">
+
+            <h3 style="text-align: center; font-weight: bold;">Selecionar Cidade</h3>
+            <hr style="color: grey;" />
+
+            <form name="formSelCidade" id="formSelCidade">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <label for="txSelCidadePesquisa">Filtro:</label>
+                            <input type="text" name="txSelCidadePesquisa" id="txSelCidadePesquisa" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="btFiltrarCidade">&nbsp;</label>
+                            <button name="btFiltrarCidade" id="btFiltrarCidade" class="btn btn-primary" style="width: 100%;">FILTRAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container" style="height: 190px;">
+                    <table name="tbCidades" id="tbCidades" class="table table-striped table-hover">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbCidadesBody">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <button name="btCancelarCidade" id="btCancelarCidade" class="btn btn-danger" style="width: 100%;" onclick="$.fancybox.close();">Cancelar</button>
+                    </div>
+
+                    <div class="col-sm-6"></div>
+
+                    <div class="col-sm-3">
+                        <button name="btConfirmarCidade" id="btConfirmarCidade" class="btn btn-success" style="width: 100%;">Confirmar</button>
                     </div>
                 </div>
             </form>
@@ -445,7 +494,9 @@
         <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/lib/jquery-mask-plugin/dist/jquery.mask.js"></script>
         <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.min.js"></script>
+
         <script type="text/javascript" src="/js/site.js"></script>
+
         <script type="text/javascript">
 
         </script>

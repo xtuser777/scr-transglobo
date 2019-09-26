@@ -171,215 +171,82 @@
             </div>
             <!-- Fim card titulo pagina -->
 
-            <div class="card">
-
-                <div class="card-container">
-
-                    <div class="fieldset-card">
-                        <div class="fieldset-card-legend" style="width: 55px;">Formulário</div>
-                        <div class="fieldset-card-container">
-                            <div class="row">
-                                <div class="form-group2 col-sm-7">
-                                    <label for="txPesquisa">FILTRO: </label>
-                                    <input type="text" name="txPesquisa" id="txPesquisa" class="form-control" style="width: 100%;" placeholder="Digite algo para filtrar..." />
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <label for="btPesquisar">&nbsp;</label>
-                                    <button name="btPesquisar" id="btPesquisar" class="btn btn-primary" style="width: 100%;">PESQUISAR</button>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <label for="btNovoFunc">&nbsp;</label>
-                                    <a name="btNovoFunc" id="btNovoFunc" class="btn btn-success" style="width: 100%;" href="/gerenciar/funcionario/novo">NOVO FUNCIONÁRIO</a>
-                                </div>
-                            </div>
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 55px;">Formulário</div>
+                <div class="fieldset-card-container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <label for="txPesquisa">Filtro:</label>
+                            <input type="text" name="txPesquisa" id="txPesquisa" class="form-control" style="width: 100%;" placeholder="Digite algo para filtrar..." />
                         </div>
-                    </div>
 
-                    <div class="fieldset-card">
-                        <div class="fieldset-card-legend" style="width: 140px;">Dados dos Funcionários</div>
-
-                        <div class="fieldset-card-container">
-                            <div class="table-container">
-                                <table name="tbListaFunc" id="tbListaFunc" class="table table-striped table-hover">
-
-                                    <thead>
-
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>NOME</th>
-                                        <th>NÍVEL</th>
-                                        <th>TIPO</th>
-                                        <th>LOGIN</th>
-                                        <th>E-MAIL</th>
-                                        <th>ADMISSÃO</th>
-                                        <th>ATIVO</th>
-                                        <th>AÇÕES</th>
-                                    </tr>
-
-                                    </thead>
-
-                                    <tbody>
-
-                                    <tr>
-                                        <td>001</td>
-                                        <td>FUNCIONARIO 001</td>
-                                        <td>ADMINISTRADOR</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC01</td>
-                                        <td>funcionario001@outlook.com</td>
-                                        <td>01/01/2003</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>002</td>
-                                        <td>FUNCIONARIO 002</td>
-                                        <td>ADMINISTRADOR</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC02</td>
-                                        <td>funcionario002@outlook.com</td>
-                                        <td>20/20/2003</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>003</td>
-                                        <td>FUNCIONARIO 003</td>
-                                        <td>GERENTE</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC03</td>
-                                        <td>funcionario003@outlook.com</td>
-                                        <td>03/03/2003</td>
-                                        <td>NÃO</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>004</td>
-                                        <td>FUNCIONARIO 004</td>
-                                        <td>GERENTE</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC04</td>
-                                        <td>funcionario004@outlook.com</td>
-                                        <td>04/12/2009</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>005</td>
-                                        <td>FUNCIONARIO 005</td>
-                                        <td>OPERACIONAL</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC05</td>
-                                        <td>funcionario005@outlook.com</td>
-                                        <td>05/05/2003</td>
-                                        <td>NÃO</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>006</td>
-                                        <td>FUNCIONARIO 006</td>
-                                        <td>OPERACIONAL</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC06</td>
-                                        <td>funcionario006@outlook.com</td>
-                                        <td>06/06/2005</td>
-                                        <td>NÃO</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>007</td>
-                                        <td>FUNCIONARIO 007</td>
-                                        <td>OPERACIONAL</td>
-                                        <td>INTERNO</td>
-                                        <td>FUNC07</td>
-                                        <td>funcionario007@outlook.com</td>
-                                        <td>07/07/2011</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>008</td>
-                                        <td>FUNCIONARIO 008</td>
-                                        <td>OPERACIONAL</td>
-                                        <td>VENDEDOR</td>
-                                        <td>FUNC08</td>
-                                        <td>funcionario008@outlook.com</td>
-                                        <td>14/07/2017</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>009</td>
-                                        <td>FUNCIONARIO 009</td>
-                                        <td>OPERACIONAL</td>
-                                        <td>VENDEDOR</td>
-                                        <td>FUNC09</td>
-                                        <td>funcionario009@outlook.com</td>
-                                        <td>07/09/2017</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>010</td>
-                                        <td>FUNCIONARIO 010</td>
-                                        <td>OPERACIONAL</td>
-                                        <td>VENDEDOR</td>
-                                        <td>FUNC10</td>
-                                        <td>funcionario010@outlook.com</td>
-                                        <td>20/02/2018</td>
-                                        <td>SIM</td>
-                                        <td>
-                                            <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                            <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                        </td>
-                                    </tr>
-
-                                    </tbody>
-
-                                </table>
-                            </div>
+                        <div class="col-sm-3">
+                            <label for="btPesquisar">&nbsp;</label>
+                            <button name="btPesquisar" id="btPesquisar" class="btn btn-primary" style="width: 100%;">PESQUISAR</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 140px;">Dados dos Funcionários</div>
+
+                <div class="fieldset-card-container">
+                    <div class="table-container">
+                        <table name="tbListaFunc" id="tbListaFunc" class="table table-striped table-hover">
+
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>NOME</th>
+                                    <th>NÍVEL</th>
+                                    <th>TIPO</th>
+                                    <th>CPF</th>
+                                    <th>ADMISSÃO</th>
+                                    <th>ATIVO</th>
+                                    <th>AÇÕES</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tbListaFuncBody">
+                                <tr>
+                                    <td>001</td>
+                                    <td>FUNCIONARIO 001</td>
+                                    <td>ADMINISTRADOR</td>
+                                    <td>INTERNO</td>
+                                    <td>FUNC01</td>
+                                    <td>01/01/2003</td>
+                                    <td>SIM</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <a role="button" class="btn btn-sm btn-primary" style="width: 100%;" href="/gerenciar/funcionario/detalhes/001">DETALHES</a>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <a role="button" class="btn btn-sm btn-danger" style="width: 100%;" href="/gerenciar/funcionario/desativar/001">DESATIVAR</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+
+                        <div class="col-sm-4">
+                            <label for="btNovoFunc">&nbsp;</label>
+                            <a name="btNovoFunc" id="btNovoFunc" class="btn btn-success" style="width: 100%;" href="/gerenciar/funcionario/novo">NOVO FUNCIONÁRIO</a>
+                        </div>
+
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- Fim conteudo da pagina -->
 

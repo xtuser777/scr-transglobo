@@ -3,16 +3,18 @@
 <html lang="pt">
 
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Venda - Orçamento - Sistema de Controle de Representações</title>
+        <title>Frete - Orçamento - Sistema de Controle de Representações</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css" />
 
         <!-- CSS Personalizado -->
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
     </head>
 
     <body>
@@ -164,7 +166,7 @@
             <!-- Card titulo pagina -->
             <div class="card-title">
                 <div class="card-title-container" style="text-align: center;">
-                    <h4><b>SCR - Orçamentos de Venda</b></h4>
+                    <h4><b>SCR - Orçamentos de Frete</b></h4>
                 </div>
             </div>
             <!-- Fim card titulo pagina -->
@@ -173,19 +175,14 @@
                 <div class="fieldset-card-legend" style="width: 55px;">Filtragem</div>
                 <div class="fieldset-card-container">
                     <div class="row">
-                        <div class="form-group2 col-sm-7">
+                        <div class="col-sm-9">
                             <label for="txPesquisa">Filtro: </label>
                             <input type="text" name="txPesquisa" id="txPesquisa" class="form-control" style="width: 100%;" placeholder="Digite algo para filtrar..." />
                         </div>
 
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <label for="btPesquisar">&nbsp;</label>
                             <button name="btPesquisar" id="btPesquisar" class="btn btn-primary" style="width: 100%;">PESQUISAR</button>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="btNovoOrcamentoVenda">&nbsp;</label>
-                            <a name="btNovoOrcamentoVenda" id="btNovoOrcamentoVenda" class="btn btn-success" style="width: 100%;" href="/orcamento/venda/novo">NOVO ORÇAMENTO</a>
                         </div>
                     </div>
                 </div>
@@ -196,42 +193,53 @@
 
                 <div class="fieldset-card-container">
                     <div class="table-container">
-                        <table name="tbListaOrcamentoVenda" id="tbListaOrcamentoVenda" class="table table-striped table-hover">
+                        <table name="tbListaOrcamentoFrete" id="tbListaOrcamentoFrete" class="table table-striped table-hover">
 
                             <thead>
 
-                                <tr>
-                                    <th>ID</th>
-                                    <th>DATA</th>
-                                    <th>CLIENTE</th>
-                                    <th>REPRESENTAÇÃO</th>
-                                    <th>FUNCIONÁRIO</th>
-                                    <th>PRODUTOS</th>
-                                    <th>FRETE</th>
-                                    <th>AÇÕES</th>
-                                </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>DATA</th>
+                                <th>CLIENTE</th>
+                                <th>REPRESENTAÇÃO</th>
+                                <th>FUNCIONÁRIO</th>
+                                <th>PRODUTOS</th>
+                                <th>FRETE</th>
+                                <th>AÇÕES</th>
+                            </tr>
 
                             </thead>
 
-                            <tbody name="tbOrcamentoVendaBody" id="tbOrcamentoVendaBody">
+                            <tbody name="tbOrcamentoFreteBody" id="tbOrcamentoFreteBody">
 
-                                <tr>
-                                    <td>001</td>
-                                    <td>FUNCIONARIO 001</td>
-                                    <td>ADMINISTRADOR</td>
-                                    <td>INTERNO</td>
-                                    <td>FUNC01</td>
-                                    <td>01/01/2003</td>
-                                    <td>SIM</td>
-                                    <td>
-                                        <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                        <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>FUNCIONARIO 001</td>
+                                <td>ADMINISTRADOR</td>
+                                <td>INTERNO</td>
+                                <td>FUNC01</td>
+                                <td>01/01/2003</td>
+                                <td>SIM</td>
+                                <td>
+                                    <a role="button" class="btn btn-sm btn-primary" href="/orcamento/frete/detalhes/001">DETALHES</a>
+                                    <a role="button" class="btn btn-sm btn-danger" href="javascript:remover(001);">REMOVER</a>
+                                </td>
+                            </tr>
 
                             </tbody>
 
                         </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+
+                        <div class="col-sm-4">
+                            <label for="btNovoOrcamentoFrete">&nbsp;</label>
+                            <a name="btNovoOrcamentoFrete" id="btNovoOrcamentoFrete" class="btn btn-success" style="width: 100%;" href="/orcamento/frete/novo">NOVO ORÇAMENTO</a>
+                        </div>
+
+                        <div class="col-sm-4"></div>
                     </div>
                 </div>
             </div>
@@ -247,6 +255,12 @@
         <script type="text/javascript" src="/lib/jquery/jquery.js"></script>
         <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/js/site.js"></script>
+
+        <script type="text/javascript">
+            function remover(id) {
+
+            }
+        </script>
 
     </body>
 

@@ -3,16 +3,18 @@
 <html lang="pt">
 
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Venda - Orçamento - Sistema de Controle de Representações</title>
+        <title>Novo - Frete - Orçamento - Sistema de Controle de Representações</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css" />
 
         <!-- CSS Personalizado -->
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
     </head>
 
     <body>
@@ -164,75 +166,193 @@
             <!-- Card titulo pagina -->
             <div class="card-title">
                 <div class="card-title-container" style="text-align: center;">
-                    <h4><b>SCR - Orçamentos de Venda</b></h4>
+                    <h4><b>SCR - Abrir Orçamento de Frete</b></h4>
                 </div>
             </div>
             <!-- Fim card titulo pagina -->
 
             <div class="fieldset-card">
-                <div class="fieldset-card-legend" style="width: 55px;">Filtragem</div>
+                <div class="fieldset-card-legend" style="width: 110px;">Dados do cliente</div>
                 <div class="fieldset-card-container">
                     <div class="row">
-                        <div class="form-group2 col-sm-7">
-                            <label for="txPesquisa">Filtro: </label>
-                            <input type="text" name="txPesquisa" id="txPesquisa" class="form-control" style="width: 100%;" placeholder="Digite algo para filtrar..." />
+                        <div class="col-sm-10">
+                            <label for="txRepresentacao">Representação:</label>
+                            <input type="text" name="txRepresentacao" id="txRepresentacao" class="form-control" style="width: 100%;" value="REPRESENTAÇÃO 002" readonly />
                         </div>
 
                         <div class="col-sm-2">
-                            <label for="btPesquisar">&nbsp;</label>
-                            <button name="btPesquisar" id="btPesquisar" class="btn btn-primary" style="width: 100%;">PESQUISAR</button>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="btNovoOrcamentoVenda">&nbsp;</label>
-                            <a name="btNovoOrcamentoVenda" id="btNovoOrcamentoVenda" class="btn btn-success" style="width: 100%;" href="/orcamento/venda/novo">NOVO ORÇAMENTO</a>
+                            <label for="btSelRepresentacao">&nbsp;</label>
+                            <button name="btSelRepresentacao" id="btSelRepresentacao" class="btn btn-primary" style="width: 100%;">SELECIONAR</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="fieldset-card">
-                <div class="fieldset-card-legend" style="width: 140px;">Dados dos Orçamentos</div>
+                <div class="fieldset-card-legend" style="width: 120px;">Produtos orçados</div>
 
                 <div class="fieldset-card-container">
-                    <div class="table-container">
-                        <table name="tbListaOrcamentoVenda" id="tbListaOrcamentoVenda" class="table table-striped table-hover">
+                    <div class="table-container" style="height: 150px;">
+                        <table name="tbProdutos" id="tbProdutos" class="table table-striped table-hover">
 
                             <thead>
-
                                 <tr>
                                     <th>ID</th>
-                                    <th>DATA</th>
-                                    <th>CLIENTE</th>
+                                    <th>DESCRIÇÃO</th>
                                     <th>REPRESENTAÇÃO</th>
-                                    <th>FUNCIONÁRIO</th>
-                                    <th>PRODUTOS</th>
-                                    <th>FRETE</th>
-                                    <th>AÇÕES</th>
+                                    <th>PESO</th>
+                                    <th>QTDE.</th>
+                                    <th>PESO TOTAL</th>
                                 </tr>
-
                             </thead>
 
-                            <tbody name="tbOrcamentoVendaBody" id="tbOrcamentoVendaBody">
-
+                            <tbody>
                                 <tr>
-                                    <td>001</td>
-                                    <td>FUNCIONARIO 001</td>
-                                    <td>ADMINISTRADOR</td>
-                                    <td>INTERNO</td>
-                                    <td>FUNC01</td>
-                                    <td>01/01/2003</td>
-                                    <td>SIM</td>
-                                    <td>
-                                        <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                        <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
-                                    </td>
+                                    <td>032</td>
+                                    <td>SACO DE FARELO DE MILHO 30KG</td>
+                                    <td>REPRESENTAÇÃO 002</td>
+                                    <td>30KG</td>
+                                    <td>60</td>
+                                    <td>1.800</td>
                                 </tr>
-
                             </tbody>
 
                         </table>
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <button name="btExcluirProduto" id="btExcluirProduto" class="btn btn-danger" style="width: 100%;">EXCLUIR</button>
+                        </div>
+
+                        <div class="col-sm-6"></div>
+
+                        <div class="col-sm-2">
+                            <button name="btLimparProdutos" id="btLimparProdutos" class="btn btn-primary" style="width: 100%;">LIMPAR</button>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button name="btAddProduto" id="btAddProduto" class="btn btn-success" style="width: 100%;">ADICIONAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 130px;">Dados do transporte</div>
+
+                <div class="fieldset-card-container">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="btSelMotorista">MOTORISTA:</label>
+                            <button name="btSelMotorista" id="btSelMotorista" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="btSelTipoCaminhao">TIPO CAMINHÃO:</label>
+                            <button name="btSelTipoCaminhao" id="btSelTipoCaminhao" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="txDistancia">DISTÂNCIA:</label>
+                            <div class="input-group">
+                                <input type="text" name="txDistancia" id="txDistancia" class="form-control" style="width: 100%;" />
+                                <div class="input-group-addon">KM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="fieldset-card">
+                        <div class="fieldset-card-legend" style="width: 120px;">Local de Origem</div>
+
+                        <div class="fieldset-card-container">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <label for="btSelEstadoOrigem">ESTADO:</label>
+                                    <button name="btSelEstadoOrigem" id="btSelEstadoOrigem" class="btn btn-default" style="width: 100%;">MINAS GERAIS</button>
+                                </div>
+
+                                <div class="col-sm-7">
+                                    <label for="btSelCidadeOrigem">CIDADE:</label>
+                                    <button name="btSelCidadeOrigem" id="btSelCidadeOrigem" class="btn btn-default" style="width: 100%;">PIEDADE DO RIO GRANDE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="fieldset-card">
+                        <div class="fieldset-card-legend" style="width: 120px;">Local de Destino</div>
+
+                        <div class="fieldset-card-container">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <label for="btSelEstadoDestino">ESTADO:</label>
+                                    <button name="btSelEstadoDestino" id="btSelEstadoDestino" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                                </div>
+
+                                <div class="col-sm-7">
+                                    <label for="btSelCidadeDestino">CIDADE:</label>
+                                    <button name="btSelCidadeDestino" id="btSelCidadeDestino" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 130px;">Valores do Orçamento</div>
+
+                <div class="fieldset-card-container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="txPesoProdutos">PESO TOTAL DOS PRODUTOS:</label>
+                            <div class="input-group">
+                                <input type="text" name="txPesoProdutos" id="txPesoProdutos" class="form-control" style="width: 100%;" value="1.800" readonly />
+                                <div class="input-group-addon">KG</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="txValorFrete">VALOR ORÇADO DO FRETE:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">R$</div>
+                                <input type="text" name="txValorFrete" id="txValorFrete" class="form-control" style="width: 100%;" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="dtOrcamento">DATA APROX. DE ENTREGA:</label>
+                            <input type="date" name="dtOrcamento" id="dtOrcamento" class="form-control" style="width: 100%;" />
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="dtValidade">VALIDADE DO ORÇAMENTO:</label>
+                            <input type="date" name="dtValidade" id="dtValidade" class="form-control" style="width: 100%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <button name="btCancelar" id="btCancelar" class="btn btn-danger" style="width: 100%;">CANCELAR</button>
+                </div>
+
+                <div class="col-sm-6"></div>
+
+                <div class="col-sm-2">
+                    <button name="btLimpar" id="btLimpar" class="btn btn-primary" style="width: 100%;">LIMPAR</button>
+                </div>
+
+                <div class="col-sm-2">
+                    <button name="btSalvar" id="btSalvar" class="btn btn-success" style="width: 100%;">SALVAR</button>
                 </div>
             </div>
 

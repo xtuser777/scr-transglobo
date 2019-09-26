@@ -72,8 +72,8 @@
                                 <a href="#" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orçamento <span class="caret"></span></a>
                                 <!-- Popup botao orcamento -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="../orcamento/venda/novo.html">Venda</a></li>
-                                    <li><a href="../orcamento/frete/novo.html">Frete</a></li>
+                                    <li><a href="/orcamento/venda/index">Venda</a></li>
+                                    <li><a href="/orcamento/frete/index">Frete</a></li>
                                 </ul>
                                 <!-- Fim popup botao orcamento -->
                             </li>

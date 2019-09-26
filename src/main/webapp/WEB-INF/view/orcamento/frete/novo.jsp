@@ -244,17 +244,17 @@
                 <div class="fieldset-card-container">
                     <div class="row">
                         <div class="col-sm-5">
-                            <label for="btSelMotorista">MOTORISTA:</label>
+                            <label for="btSelMotorista">Motorista:</label>
                             <button name="btSelMotorista" id="btSelMotorista" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
                         </div>
 
                         <div class="col-sm-4">
-                            <label for="btSelTipoCaminhao">TIPO CAMINHÃO:</label>
+                            <label for="btSelTipoCaminhao">Tipo Caminhão:</label>
                             <button name="btSelTipoCaminhao" id="btSelTipoCaminhao" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="txDistancia">DISTÂNCIA:</label>
+                            <label for="txDistancia">Distância:</label>
                             <div class="input-group">
                                 <input type="text" name="txDistancia" id="txDistancia" class="form-control" style="width: 100%;" />
                                 <div class="input-group-addon">KM</div>
@@ -272,13 +272,13 @@
                         <div class="fieldset-card-container">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <label for="btSelEstadoOrigem">ESTADO:</label>
-                                    <button name="btSelEstadoOrigem" id="btSelEstadoOrigem" class="btn btn-default" style="width: 100%;">MINAS GERAIS</button>
+                                    <label for="btSelEstadoOrigem">Estado:</label>
+                                    <button name="btSelEstadoOrigem" id="btSelEstadoOrigem" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                                 </div>
 
                                 <div class="col-sm-7">
-                                    <label for="btSelCidadeOrigem">CIDADE:</label>
-                                    <button name="btSelCidadeOrigem" id="btSelCidadeOrigem" class="btn btn-default" style="width: 100%;">PIEDADE DO RIO GRANDE</button>
+                                    <label for="btSelCidadeOrigem">Cidade:</label>
+                                    <button name="btSelCidadeOrigem" id="btSelCidadeOrigem" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                                 </div>
                             </div>
                         </div>
@@ -292,13 +292,13 @@
                         <div class="fieldset-card-container">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <label for="btSelEstadoDestino">ESTADO:</label>
-                                    <button name="btSelEstadoDestino" id="btSelEstadoDestino" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                                    <label for="btSelEstadoDestino">Estado:</label>
+                                    <button name="btSelEstadoDestino" id="btSelEstadoDestino" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                                 </div>
 
                                 <div class="col-sm-7">
-                                    <label for="btSelCidadeDestino">CIDADE:</label>
-                                    <button name="btSelCidadeDestino" id="btSelCidadeDestino" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                                    <label for="btSelCidadeDestino">Cidade:</label>
+                                    <button name="btSelCidadeDestino" id="btSelCidadeDestino" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +312,7 @@
                 <div class="fieldset-card-container">
                     <div class="row">
                         <div class="col-sm-3">
-                            <label for="txPesoProdutos">PESO TOTAL DOS PRODUTOS:</label>
+                            <label for="txPesoProdutos">Peso Total dos Produtos:</label>
                             <div class="input-group">
                                 <input type="text" name="txPesoProdutos" id="txPesoProdutos" class="form-control" style="width: 100%;" value="1.800" readonly />
                                 <div class="input-group-addon">KG</div>
@@ -320,7 +320,7 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="txValorFrete">VALOR ORÇADO DO FRETE:</label>
+                            <label for="txValorFrete">Valor Orçado do Frete:</label>
                             <div class="input-group">
                                 <div class="input-group-addon">R$</div>
                                 <input type="text" name="txValorFrete" id="txValorFrete" class="form-control" style="width: 100%;" />
@@ -328,12 +328,12 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="dtOrcamento">DATA APROX. DE ENTREGA:</label>
+                            <label for="dtOrcamento">Data Aprox. de Entrega:</label>
                             <input type="date" name="dtOrcamento" id="dtOrcamento" class="form-control" style="width: 100%;" />
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="dtValidade">VALIDADE DO ORÇAMENTO:</label>
+                            <label for="dtValidade">Validade do Orçamento:</label>
                             <input type="date" name="dtValidade" id="dtValidade" class="form-control" style="width: 100%;" />
                         </div>
                     </div>

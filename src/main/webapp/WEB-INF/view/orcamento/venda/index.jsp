@@ -3,18 +3,16 @@
 <html lang="pt">
 
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Início - Notificações - Sistema de Controle de Representações</title>
+        <title>Venda - Orçamento - Sistema de Controle de Representações</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css" />
 
         <!-- CSS Personalizado -->
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
     </head>
 
     <body>
@@ -72,8 +70,8 @@
                                 <a href="#" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orçamento <span class="caret"></span></a>
                                 <!-- Popup botao orcamento -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="../orcamento/venda/novo.html">Venda</a></li>
-                                    <li><a href="../orcamento/frete/novo.html">Frete</a></li>
+                                    <li><a href="/orcamento/venda/index">Venda</a></li>
+                                    <li><a href="/orcamento/frete/index">Frete</a></li>
                                 </ul>
                                 <!-- Fim popup botao orcamento -->
                             </li>
@@ -84,10 +82,10 @@
                                 <a href="#" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pedido <span class="caret"></span></a>
                                 <!-- Popup botao pedido -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="../pedido/venda/novo.html">Venda</a></li>
-                                    <li><a href="../pedido/frete/novo.html">Frete</a></li>
-                                    <li><a href="../pedido/status/index.html">Alterar status</a></li>
-                                    <li><a href="../pedido/autorizacao/index.html">Autorizar Carregamento</a></li>
+                                    <li><a href="../../pedido/venda/novo.html">Venda</a></li>
+                                    <li><a href="../../pedido/frete/novo.html">Frete</a></li>
+                                    <li><a href="../../pedido/status/index.html">Alterar status</a></li>
+                                    <li><a href="../../pedido/autorizacao/index.html">Autorizar Carregamento</a></li>
                                 </ul>
                                 <!-- Fim popup botao pedido -->
                             </li>
@@ -98,10 +96,10 @@
                                 <a href="#" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Controlar <span class="caret"></span></a>
                                 <!-- Popup botao controlar -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="../controlar/contas/pagar/index.html">Contas a Pagar</a></li>
-                                    <li><a href="../controlar/contas/receber/index.html">Contas a Receber</a></li>
-                                    <li><a href="../controlar/lancar/despezas/index.html">Lançar Despesas</a></li>
-                                    <li><a href="../controlar/comissao/index.html">Comissões</a></li>
+                                    <li><a href="../../controlar/contas/pagar/index.html">Contas a Pagar</a></li>
+                                    <li><a href="../../controlar/contas/receber/index.html">Contas a Receber</a></li>
+                                    <li><a href="../../controlar/lancar/despezas/index.html">Lançar Despesas</a></li>
+                                    <li><a href="../../controlar/comissao/index.html">Comissões</a></li>
                                 </ul>
                                 <!-- Fim popup botao controlar -->
                             </li>
@@ -166,64 +164,70 @@
             <!-- Card titulo pagina -->
             <div class="card-title">
                 <div class="card-title-container" style="text-align: center;">
-                    <h4><b>SCR - Início - Notificações</b></h4>
+                    <h4><b>SCR - Orçamentos de Venda</b></h4>
                 </div>
             </div>
             <!-- Fim card titulo pagina -->
 
-            <div class="fieldset-card">
-                <div class="fieldset-card-legend"></div>
 
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 55px;">Filtragem</div>
                 <div class="fieldset-card-container">
                     <div class="row">
-                        <div class="col-sm-3">
-                            <label for="dtEventos">Data Eventos:</label>
-                            <input type="date" name="dtEventos" id="dtEventos" class="form-control" style="width: 100%;" />
-                        </div>
-
-                        <div class="col-sm-7">
-                            <label for="cbTipoPedido">Tipo Pedido:</label>
-                            <select name="cbTipoPedido" id="cbTipoPedido" class="form-control" style="width: 100%;">
-                                <option value="0">VENDA E FRETE</option>
-                                <option value="1">VENDA</option>
-                                <option value="2">FRETE</option>
-                            </select>
+                        <div class="form-group2 col-sm-7">
+                            <label for="txPesquisa">Filtro: </label>
+                            <input type="text" name="txPesquisa" id="txPesquisa" class="form-control" style="width: 100%;" placeholder="Digite algo para filtrar..." />
                         </div>
 
                         <div class="col-sm-2">
-                            <label for="btFiltrar">&nbsp;</label>
-                            <button name="btFiltrar" id="btFiltrar" class="btn btn-primary" style="width: 100%;">FILTRAR</button>
+                            <label for="btPesquisar">&nbsp;</label>
+                            <button name="btPesquisar" id="btPesquisar" class="btn btn-primary" style="width: 100%;">PESQUISAR</button>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="btNovoOrcamentoVenda">&nbsp;</label>
+                            <a name="btNovoOrcamentoVenda" id="btNovoOrcamentoVenda" class="btn btn-success" style="width: 100%;" href="/orcamento/venda/novo">NOVO ORÇAMENTO</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="fieldset-card">
-                <div class="fieldset-card-legend" style="width: 140px;">Eventos do Sistema</div>
+                <div class="fieldset-card-legend" style="width: 140px;">Dados dos Orçamentos</div>
+
                 <div class="fieldset-card-container">
                     <div class="table-container">
-                        <table id="tbEventos" class="table table-bordered table-hover table-responsive">
+                        <table name="tbListaOrcamentoVenda" id="tbListaOrcamentoVenda" class="table table-striped table-hover">
 
                             <thead>
+
                                 <tr>
                                     <th>ID</th>
-                                    <th>DESCRIÇÃO</th>
                                     <th>DATA</th>
-                                    <th>HORA</th>
-                                    <th>PEDIDO</th>
+                                    <th>CLIENTE</th>
+                                    <th>REPRESENTAÇÃO</th>
                                     <th>FUNCIONÁRIO</th>
+                                    <th>PRODUTOS</th>
+                                    <th>FRETE</th>
+                                    <th>AÇÕES</th>
                                 </tr>
+
                             </thead>
 
-                            <tbody id="tbEventosBody">
+                            <tbody name="tbOrcamentoVendaBody" id="tbOrcamentoVendaBody">
 
                                 <tr>
-                                    <td>0001</td>
-                                    <td>CONFIRMAÇÃO DE PAGAMENTO DO PEDIDO 0001</td>
-                                    <td>18/09/2019</td>
-                                    <td>13:14:56</td>
-                                    <td>0001</td>
-                                    <td>FUNCIONÁRIO 007</td>
+                                    <td>001</td>
+                                    <td>FUNCIONARIO 001</td>
+                                    <td>ADMINISTRADOR</td>
+                                    <td>INTERNO</td>
+                                    <td>FUNC01</td>
+                                    <td>01/01/2003</td>
+                                    <td>SIM</td>
+                                    <td>
+                                        <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
+                                        <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
+                                    </td>
                                 </tr>
 
                             </tbody>
@@ -231,17 +235,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-2">
-                    <button name="btGerarPdf" id="btGerarPdf" class="btn btn-primary" style="width: 100%;">Gerar PDF</button>
-                </div>
-                <div class="col-sm-2">
-                    <button name="btImprimir" id="btImprimir" class="btn btn-success" style="width: 100%;">Imprimir</button>
-                </div>
-                <div class="col-sm-4"></div>
             </div>
 
         </div>

@@ -173,210 +173,207 @@
             </div>
             <!-- Fim card titulo pagina -->
 
-            <div class="card">
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 130px;">Dados do Funcionário</div>
+                <div class="fieldset-card-container">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label for="txId">Id:</label>
+                                <input type="text" name="txId" id="txId" class="form-control" style="width: 100%;" value="" readonly />
+                            </div>
 
-                <div class="card-container">
-
-                    <div class="fieldset-card">
-                        <div class="fieldset-card-legend" style="width: 130px;">Dados do Funcionário</div>
-                        <div class="fieldset-card-container">
-                            <form class="form-inline">
-                                <div class="row">
-                                    <div class="col-sm-2">
-                                        <label for="txId">ID:</label>
-                                        <input type="text" name="txId" id="txId" class="form-control" style="width: 100%;" value="011" disabled />
-                                    </div>
-
-                                    <div class="col-sm-10">
-                                        <label for="txNome">NOME:</label>
-                                        <input type="text" name="txNome" id="txNome" class="form-control" style="width: 100%;" value="FUNCIONARIO 011" />
-                                    </div>
-                                </div>
-
-                                <div style="height: 7px;"></div>
-
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <label for="txRg">RG:</label>
-                                        <input type="text" name="txRg" id="txRg" class="form-control" style="width: 100%;" value="11.011.011-1" />
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <label for="txCpf">CPF:</label>
-                                        <input type="text" name="txCpf" id="txCpf" class="form-control" style="width: 100%;" data-mask="000.000.000-00" data-mask-clearifnotmatch="true" value="011.011.011-11" />
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <label for="dtAdm">ADMISSÃO:</label>
-                                        <input type="date" name="dtAdm" id="dtAdm" class="form-control" style="width: 100%;" value="2019-23-09" />
-                                    </div>
-
-                                    <div class="col-sm-2">
-                                        <label for="cbTipo">TIPO:</label>
-                                        <select name="cbTipo" id="cbTipo" class="form-control" style="width: 100%;">
-                                            <option value="0">SELECIONE</option>
-                                            <option value="1">INTERNO</option>
-                                            <option value="2">VENDEDOR</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="fieldset-card">
-                        <div class="fieldset-card-legend" style="width: 188px;">Dados de contato do funcionario</div>
-                        <div class="fieldset-card-container">
-                            <form class="form-inline">
-                                <div class="row">
-                                    <div class="col-sm-10">
-                                        <label for="txLogradouro">LOGRADOURO:</label>
-                                        <input type="text" name="txLogradouro" id="txLogradouro" class="form-control" style="width: 100%;" value="RUA 011" />
-                                    </div>
-
-                                    <div class="col-sm-2">
-                                        <label for="txNumero">NÚMERO:</label>
-                                        <input type="text" name="txNumero" id="txNumero" class="form-control" style="width: 100%;" value="011" />
-                                    </div>
-                                </div>
-
-                                <div style="height: 7px;"></div>
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="txBairro">BAIRRO:</label>
-                                        <input type="text" name="txBairro" id="txBairro" class="form-control" style="width: 100%;" value="VILA 011" />
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <label for="txComplemento">COMPLEMENTO:</label>
-                                        <input type="text" name="txComplemento" id="txComplemento" class="form-control" style="width: 100%;" value="" />
-                                    </div>
-                                </div>
-
-                                <div style="height: 7px;"></div>
-
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="btEstado">ESTADO:</label>
-                                        <button name="btEstado" id="btEstado" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
-                                    </div>
-
-                                    <input type="hidden" name="txIdEstado" id="txIdEstado" value="0" />
-
-                                    <div class="col-sm-6">
-                                        <label for="btCidade">CIDADE:</label>
-                                        <button name="btCidade" id="btCidade" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
-                                    </div>
-
-                                    <input type="hidden" name="txIdCidade" id="txIdCidade" value="0" />
-
-                                    <div class="col-sm-2">
-                                        <label for="txCep">CEP:</label>
-                                        <input type="text" name="txCep" id="txCep" class="form-control" style="width: 100%;" data-mask="00.000-000" data-mask-clearifnotmatch="true" value="" />
-                                    </div>
-                                </div>
-
-                                <div style="height: 7px;"></div>
-
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <label for="txTel">TELEFONE:</label>
-                                        <div class="input-group" style="width: 100%;">
-                                            <div class="input-group-addon"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></div>
-                                            <input type="text" name="txTel" id="txTel" class="form-control" data-mask="(00) 0000-0000" data-mask-clearifnotmatch="true" value="1832651489" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <label for="txCel">CELULAR:</label>
-                                        <div class="input-group" style="width: 100%;">
-                                            <div class="input-group-addon"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></div>
-                                            <input type="text" name="txCel" id="txCel" class="form-control" data-mask="(00) 0 0000-0000" data-mask-clearifnotmatch="true" value="18998652523" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <label for="txEmail">E-MAIL:</label>
-                                        <div class="input-group" style="width: 100%;">
-                                            <div class="input-group-addon">@</div>
-                                            <input type="text" name="txEmail" id="txEmail" class="form-control" value="funcionario011@outlook.com" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="fieldset-card">
-                        <div class="fieldset-card-legend" style="width: 140px;">Dados de autenticação</div>
-                        <div class="fieldset-card-container">
-                            <form class="form-inline">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="cbNivel">NÍVEL:</label>
-                                        <select name="cbNivel" id="cbNivel" class="form-control" style="width: 100%;">
-                                            <option value="0">SELECIONAR</option>
-                                            <option value="1">ADMINISTRADOR</option>
-                                            <option value="2">GERENTE</option>
-                                            <option value="3">OPERACONAL</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <label for="txLogin">LOGIN:</label>
-                                        <div class="input-group" style="width: 100%;">
-                                            <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
-                                            <input type="text" name="txLogin" id="txLogin" class="form-control" value="FUNC011" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div style="height: 7px;"></div>
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="txSenha">SENHA:</label>
-                                        <div class="input-group" style="width: 100%;">
-                                            <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-                                            <input type="password" name="txSenha" id="txSenha" class="form-control" value="FUNC011123" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <label for="txConfSenha">CONFIRMAR SENHA:</label>
-                                        <div class="input-group" style="width: 100%;">
-                                            <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-                                            <input type="password" name="txConfSenha" id="txConfSenha" class="form-control" value="FUNC011123" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <a class="btn btn-default" style="width: 100%;" href="../funcionario/index.html">VOLTAR</a>
+                            <div class="col-sm-10">
+                                <label for="txNome">Nome:</label>
+                                <input type="text" name="txNome" id="txNome" class="form-control" style="width: 100%;" value="" />
+                            </div>
                         </div>
 
-                        <div class="col-sm-6"></div>
+                        <div style="height: 7px;"></div>
 
-                        <div class="col-sm-2">
-                            <button name="btLimpar" id="btLimpar" class="btn btn-primary" style="width: 100%;">LIMPAR</button>
-                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="txRg">RG:</label>
+                                <input type="text" name="txRg" id="txRg" class="form-control" style="width: 100%;" value="" />
+                            </div>
 
-                        <div class="col-sm-2">
-                            <button name="btSalvar" id="btSalvar" class="btn btn-success" style="width: 100%;">SALVAR</button>
+                            <div class="col-sm-4">
+                                <label for="txCpf">CPF:</label>
+                                <input type="text" name="txCpf" id="txCpf" class="form-control" style="width: 100%;" data-mask="000.000.000-00" data-mask-clearifnotmatch="true" value="" />
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="dtAdm">Admissão:</label>
+                                <input type="date" name="dtAdm" id="dtAdm" class="form-control" style="width: 100%;" value="" />
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="cbTipo">Tipo:</label>
+                                <select name="cbTipo" id="cbTipo" class="form-control" style="width: 100%;">
+                                    <option value="0">SELECIONE</option>
+                                    <option value="1">INTERNO</option>
+                                    <option value="2">VENDEDOR</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
+
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 188px;">Dados de contato do funcionario</div>
+                <div class="fieldset-card-container">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <label for="txRua">Rua:</label>
+                                <input type="text" name="txRua" id="txRua" class="form-control" style="width: 100%;" value="" />
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="txNumero">Número:</label>
+                                <input type="text" name="txNumero" id="txNumero" class="form-control" style="width: 100%;" value="" />
+                            </div>
+                        </div>
+
+                        <div style="height: 7px;"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="txBairro">Bairro:</label>
+                                <input type="text" name="txBairro" id="txBairro" class="form-control" style="width: 100%;" value="" />
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="txComplemento">Complemento:</label>
+                                <input type="text" name="txComplemento" id="txComplemento" class="form-control" style="width: 100%;" value="" />
+                            </div>
+                        </div>
+
+                        <div style="height: 7px;"></div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="btEstado">Estado:</label>
+                                <a role="button" id="btEstado" class="btn btn-default" style="width: 100%;" data-fancybox data-src="#fancyFormSelEstado" href="javascript:;">
+                                    SELECIONAR
+                                </a>
+                            </div>
+
+                            <input type="hidden" name="txIdEstado" id="txIdEstado" value="0" />
+
+                            <div class="col-sm-6">
+                                <label for="btCidade">Cidade:</label>
+                                <button name="btCidade" id="btCidade" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                            </div>
+
+                            <input type="hidden" name="txIdCidade" id="txIdCidade" value="0" />
+
+                            <div class="col-sm-2">
+                                <label for="txCep">CEP:</label>
+                                <input type="text" name="txCep" id="txCep" class="form-control" style="width: 100%;" data-mask="00.000-000" data-mask-clearifnotmatch="true" value="" />
+                            </div>
+                        </div>
+
+                        <div style="height: 7px;"></div>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="txTel">Telefone:</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></div>
+                                    <input type="text" name="txTel" id="txTel" class="form-control" data-mask="(00) 0000-0000" data-mask-clearifnotmatch="true" value="" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="txCel">Celular:</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></div>
+                                    <input type="text" name="txCel" id="txCel" class="form-control" data-mask="(00) 0 0000-0000" data-mask-clearifnotmatch="true" value="" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="txEmail">E-Mail:</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <div class="input-group-addon">@</div>
+                                    <input type="text" name="txEmail" id="txEmail" class="form-control" value="funcionario011@outlook.com" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 140px;">Dados de autenticação</div>
+                <div class="fieldset-card-container">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="cbNivel">Nível:</label>
+                                <select name="cbNivel" id="cbNivel" class="form-control" style="width: 100%;">
+                                    <option value="0">SELECIONAR</option>
+                                    <option value="1">ADMINISTRADOR</option>
+                                    <option value="2">GERENTE</option>
+                                    <option value="3">OPERACONAL</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="txLogin">Login:</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+                                    <input type="text" name="txLogin" id="txLogin" class="form-control" value="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 7px;"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="txSenha">Senha:</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
+                                    <input type="password" name="txSenha" id="txSenha" class="form-control" value="FUNC011123" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="txConfSenha">Confirmar Senha:</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
+                                    <input type="password" name="txConfSenha" id="txConfSenha" class="form-control" value="FUNC011123" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <a class="btn btn-default" style="width: 100%;" href="/gerenciar/funcionario/index">VOLTAR</a>
+                </div>
+
+                <div class="col-sm-6"></div>
+
+                <div class="col-sm-2">
+                    <button name="btLimpar" id="btLimpar" class="btn btn-primary" style="width: 100%;">LIMPAR</button>
+                </div>
+
+                <div class="col-sm-2">
+                    <button name="btSalvar" id="btSalvar" class="btn btn-success" style="width: 100%;">SALVAR</button>
+                </div>
+            </div>
+
         </div>
         <!-- Fim conteudo da pagina -->
 
         <!-- Fancybox FORM QUESTIONÁRIO -->
-        <div style="display: none; min-width: 300px; width: 800px" id="formSelEstado">
+        <div style="display: none; min-width: 300px; width: 800px" id="fancyFormSelEstado">
             <form name="formSelEstado" id="formSelEstado" action="" method="post">
                 <div class="row">
                     <div class="col-sm-10">
@@ -450,12 +447,7 @@
         <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.min.js"></script>
         <script type="text/javascript" src="/js/site.js"></script>
         <script type="text/javascript">
-            $("#btEstado").click( function () {
-                $.fancybox.open({
-                    src: '#formSelEstado',
-                    type: 'inline'
-                });
-            });
+
         </script>
 
     </body>

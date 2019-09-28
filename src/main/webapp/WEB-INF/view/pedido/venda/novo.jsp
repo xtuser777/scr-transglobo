@@ -3,16 +3,19 @@
 <html lang="pt">
 
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Novo - Venda - Orçamento - Sistema de Controle de Representações</title>
+        <title>Novo - Venda - Pedido - Sistema de Controle de Representações</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" type="txet/css" href="/lib/fancybox/jquery.fancybox.min.css" />
 
         <!-- CSS Personalizado -->
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
     </head>
 
     <body>
@@ -164,49 +167,50 @@
             <!-- Card titulo pagina -->
             <div class="card-title">
                 <div class="card-title-container" style="text-align: center;">
-                    <h4><b>SCR - Abrir Orçamento de Venda</b></h4>
+                    <h4><b>SCR - Abrir Pedido de Venda</b></h4>
                 </div>
             </div>
             <!-- Fim card titulo pagina -->
 
             <div class="fieldset-card">
-                <div class="fieldset-card-legend" style="width: 110px;">Dados do cliente</div>
+                <div class="fieldset-card-legend" style="width: 110px;">Dados do pedido</div>
                 <div class="fieldset-card-container">
                     <div class="row">
-                        <div class="col-sm-7">
-                            <label for="txNomeCliente">Nome:</label>
-                            <input type="text" name="txNomeCliente" id="txNomeCliente" class="form-control" style="width: 100%;" />
-                        </div>
-
-                        <div class="col-sm-5">
-                            <label for="txDocumentoCliente">Documento:</label>
-                            <input type="text" name="txDocumentoCliente" id="txDocumentoCliente" class="form-control" style="width: 100%;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 7px;"></div>
-
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label for="txTelCliente">Telefone:</label>
-                            <input type="text" name="txTelCliente" id="txTelCliente" class="form-control" style="width: 100%;" />
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="txCelCliente">Celular:</label>
-                            <input type="text" name="txCelCliente" id="txCelCliente" class="form-control" style="width: 100%;" />
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="btSelCliente">Cliente:</label>
+                                    <button name="btSelCliente" id="btSelCliente" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-sm-6">
-                            <label for="txEmailCliente">E-Mail:</label>
-                            <input type="text" name="txEmailCliente" id="txEmailCliente" class="form-control" style="width: 100%;" />
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="btSelRepresentacao">Representação:</label>
+                                    <button name="btSelRepresentacao" id="btSelRepresentacao" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <label for="txDescricao">Descrição:</label>
+                            <input type="text" name="txDescricao" id="txDescricao" class="form-control" style="width: 100%;" />
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="btSelOrcamento">Orçamento:</label>
+                            <button name="btSelOrcamento" id="btSelOrcamento" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="fieldset-card">
-                <div class="fieldset-card-legend" style="width: 120px;">Produtos orçados</div>
+                <div class="fieldset-card-legend" style="width: 140px;">Produtos do pedido</div>
 
                 <div class="fieldset-card-container">
                     <div class="table-container" style="height: 150px;">
@@ -216,24 +220,24 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>DESCRIÇÃO</th>
-                                    <th>REPRESENTAÇÃO</th>
+                                    <th>UNIDADE</th>
                                     <th>VALOR</th>
                                     <th>QTDE.</th>
+                                    <th>PESO</th>
                                     <th>TOTAL</th>
                                 </tr>
                             </thead>
 
-                            <tbody name="tbProdutosBody" id="tbProdutosBody">
-
+                            <tbody id="tbProdutosBody">
                                 <tr>
                                     <td>077</td>
-                                    <td>SACO DE FARELO DE ALGODÃO 50KG</td>
-                                    <td>REPRESENTAÇÃO 005</td>
+                                    <td>SACO DE FARELO DE ALGODAO 50KG</td>
+                                    <td>SACO DE 50KG</td>
                                     <td>170,00</td>
                                     <td>50</td>
+                                    <td>2.500</td>
                                     <td>8.500,00</td>
                                 </tr>
-
                             </tbody>
 
                         </table>
@@ -264,13 +268,13 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="btSelTipoCaminhao">Tipo Caminhão:</label>
-                            <button name="btSelTipoCaminhao" id="btSelTipoCaminhao" class="btn btn-default" style="width: 100%;">Clique para selecionar</button>
+                            <button name="btSelTipoCaminhao" id="btSelTipoCaminhao" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                         </div>
 
                         <div class="col-sm-4">
-                            <label for="txPesoProdutos">Peso Total:</label>
+                            <label for="txPesoProdutos">Peso dos Produtos:</label>
                             <div class="input-group">
-                                <input type="text" name="txPesoProdutos" id="txPesoProdutos" class="form-control" style="width: 100%;" value="2.500" readonly />
+                                <input type="text" name="txPesoProdutos" id="txPesoProdutos" class="form-control" style="width: 100%;" value="" readonly />
                                 <div class="input-group-addon">KG</div>
                             </div>
                         </div>
@@ -295,12 +299,12 @@
                             <div class="row">
                                 <div class="col-sm-5">
                                     <label for="btSelEstadoOrigem">Estado:</label>
-                                    <button name="btSelEstadoOrigem" id="btSelEstadoOrigem" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                                    <button name="btSelEstadoOrigem" id="btSelEstadoOrigem" class="btn btn-default" style="width: 100%;">SELECIONE</button>
                                 </div>
 
                                 <div class="col-sm-7">
                                     <label for="btSelCidadeOrigem">Cidade:</label>
-                                    <button name="btSelCidadeOrigem" id="btSelCidadeOrigem" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                                    <button name="btSelCidadeOrigem" id="btSelCidadeOrigem" class="btn btn-default" style="width: 100%;">SELECIONE</button>
                                 </div>
                             </div>
                         </div>
@@ -329,34 +333,100 @@
             </div>
 
             <div class="fieldset-card">
+                <div class="fieldset-card-legend" style="width: 130px;">Formas de Pagamento</div>
+
+                <div class="fieldset-card-container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="cbSelFpProdutos">Produtos:</label>
+                            <select name="cbSelFpProdutos" id="cbSelFpProdutos" class="form-control">
+                                <option value="0">SELECIONE A FORMA</option>
+                                <option value="1">BOLETO A VISTA</option>
+                                <option value="2">TRASNFERÊNCIA BANCÁRIA</option>
+                                <option value="3">CHEQUE</option>
+                                <option value="4">DINHEIRO</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="cbSelFpFrete">Frete:</label>
+                            <select name="cbSelFpFrete" id="cbSelFpFrete" class="form-control">
+                                <option value="0">SELECIONE A FORMA</option>
+                                <option value="1">BOLETO A VISTA</option>
+                                <option value="2">TRASNFERÊNCIA BANCÁRIA</option>
+                                <option value="3">CHEQUE</option>
+                                <option value="4">DINHEIRO</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="cbSelFpMotorista">Motorista:</label>
+                            <select name="cbSelFpMotorista" id="cbSelFpMotorista" class="form-control">
+                                <option value="0">SELECIONE A FORMA</option>
+                                <option value="1">BOLETO A VISTA</option>
+                                <option value="2">TRASNFERÊNCIA BANCÁRIA</option>
+                                <option value="3">CHEQUE</option>
+                                <option value="4">DINHEIRO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="txPrazoProdutos">Prazo Produtos:</label>
+                            <input type="text" name="txPrazoProdutos" id="txPrazoProdutos" class="form-control" style="width: 100%;" />
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="txPrazoFrete">Prazo Frete:</label>
+                            <input type="text" name="txPrazoFrete" id="txPrazoFrete" class="form-control" style="width: 100%;" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="txPrazoMotorista">Prazo Motorista:</label>
+                            <input type="text" name="txPrazoMotorista" id="txPrazoMotorista" class="form-control" style="width: 100%;" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="txValorMotorista">Valor Motorista:</label>
+                            <input type="text" name="txValorMotorista" id="txValorMotorista" class="form-control" style="width: 100%;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fieldset-card">
                 <div class="fieldset-card-legend" style="width: 130px;">Valores do Orçamento</div>
 
                 <div class="fieldset-card-container">
                     <div class="row">
                         <div class="col-sm-3">
-                            <label for="txValorProdutos">Valor Orçado dos Produtos:</label>
+                            <label for="txValorProdutos">Valor Produtos:</label>
                             <div class="input-group">
                                 <div class="input-group-addon">R$</div>
-                                <input type="text" name="txValorProdutos" id="txValorProdutos" class="form-control" style="width: 100%;" value="8.500,00" readonly />
+                                <input type="text" name="txValorProdutos" id="txValorProdutos" class="form-control" style="width: 100%;" value="" readonly />
                             </div>
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="txValorFrete">Valor Orçado do Frete:</label>
+                            <label for="txValorFrete">Valor Frete:</label>
                             <div class="input-group">
                                 <div class="input-group-addon">R$</div>
-                                <input type="text" name="txValorFrete" id="txValorFrete" class="form-control" style="width: 100%;" value="" />
+                                <input type="text" name="txValorFrete" id="txValorFrete" class="form-control" style="width: 100%;" />
                             </div>
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="dtOrcamento">Data de Entrega:</label>
-                            <input type="date" name="dtOrcamento" id="dtOrcamento" class="form-control" style="width: 100%;" />
+                            <label for="txValorAdiantamentoMotorista">Adiantamento Motorista:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">R$</div>
+                                <input type="text" name="txValorAdiantamentoMotorista" id="txValorAdiantamentoMotorista" class="form-control" style="width: 100%;" />
+                            </div>
                         </div>
 
                         <div class="col-sm-3">
-                            <label for="dtValidade">Validade:</label>
-                            <input type="date" name="dtValidade" id="dtValidade" class="form-control" style="width: 100%;" />
+                            <label for="dtEntrega">Data de Entrega:</label>
+                            <input type="date" name="dtEntrega" id="dtEntrega" class="form-control" style="width: 100%;" />
                         </div>
                     </div>
                 </div>
@@ -389,6 +459,7 @@
         <script type="text/javascript" src="/lib/jquery/jquery.js"></script>
         <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/js/site.js"></script>
+        <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.min.js"></script>
 
     </body>
 

@@ -82,10 +82,10 @@
                                 <a href="#" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pedido <span class="caret"></span></a>
                                 <!-- Popup botao pedido -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="../../pedido/venda/novo.html">Venda</a></li>
-                                    <li><a href="../../pedido/frete/novo.html">Frete</a></li>
-                                    <li><a href="../../pedido/status/index.html">Alterar status</a></li>
-                                    <li><a href="../../pedido/autorizacao/index.html">Autorizar Carregamento</a></li>
+                                    <li><a href="/pedido/venda/index">Venda</a></li>
+                                    <li><a href="/pedido/frete/index">Frete</a></li>
+                                    <li><a href="/pedido/status/index">Alterar status</a></li>
+                                    <li><a href="/pedido/autorizar/index">Autorizar Carregamento</a></li>
                                 </ul>
                                 <!-- Fim popup botao pedido -->
                             </li>
@@ -173,19 +173,14 @@
                 <div class="fieldset-card-legend" style="width: 55px;">Filtragem</div>
                 <div class="fieldset-card-container">
                     <div class="row">
-                        <div class="form-group2 col-sm-7">
+                        <div class="col-sm-9">
                             <label for="txPesquisa">Filtro: </label>
                             <input type="text" name="txPesquisa" id="txPesquisa" class="form-control" style="width: 100%;" placeholder="Digite algo para filtrar..." />
                         </div>
 
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <label for="btPesquisar">&nbsp;</label>
                             <button name="btPesquisar" id="btPesquisar" class="btn btn-primary" style="width: 100%;">PESQUISAR</button>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <label for="btNovoOrcamentoVenda">&nbsp;</label>
-                            <a name="btNovoOrcamentoVenda" id="btNovoOrcamentoVenda" class="btn btn-success" style="width: 100%;" href="/orcamento/venda/novo">NOVO ORÇAMENTO</a>
                         </div>
                     </div>
                 </div>
@@ -224,14 +219,24 @@
                                     <td>01/01/2003</td>
                                     <td>SIM</td>
                                     <td>
-                                        <a role="button" class="btn btn-xs btn-primary" href="alterar.html">ALTERAR</a>
-                                        <a role="button" class="btn btn-xs btn-danger" href="#">DESATIVAR</a>
+                                        <a role="button" class="btn btn-xs btn-primary" href="/orcamento/venda/detalhes/001">DETALHES</a>
+                                        <a role="button" class="btn btn-xs btn-danger" href="#">REMOVER</a>
                                     </td>
                                 </tr>
 
                             </tbody>
 
                         </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+
+                        <div class="col-sm-4">
+                            <a role="button" id="btNovoOrcamento" class="btn btn-success" style="width: 100%;" href="/orcamento/venda/novo">NOVO ORÇAMENTO</a>
+                        </div>
+
+                        <div class="col-sm-4"></div>
                     </div>
                 </div>
             </div>

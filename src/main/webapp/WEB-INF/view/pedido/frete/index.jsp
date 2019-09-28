@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Frete - Orçamento - Sistema de Controle de Representações</title>
+        <title>Frete - Pedido - Sistema de Controle de Representações</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css" />
@@ -166,7 +166,7 @@
             <!-- Card titulo pagina -->
             <div class="card-title">
                 <div class="card-title-container" style="text-align: center;">
-                    <h4><b>SCR - Orçamentos de Frete</b></h4>
+                    <h4><b>SCR - Pedidos de Frete</b></h4>
                 </div>
             </div>
             <!-- Fim card titulo pagina -->
@@ -193,35 +193,35 @@
 
                 <div class="fieldset-card-container">
                     <div class="table-container">
-                        <table name="tbListaOrcamentoFrete" id="tbListaOrcamentoFrete" class="table table-striped table-hover">
+                        <table id="tbPedidoFrete" class="table table-striped table-hover">
 
                             <thead>
 
                             <tr>
                                 <th>ID</th>
+                                <th>DESCRIÇÃO</th>
                                 <th>DATA</th>
                                 <th>CLIENTE</th>
                                 <th>REPRESENTAÇÃO</th>
                                 <th>FUNCIONÁRIO</th>
-                                <th>PRODUTOS</th>
                                 <th>FRETE</th>
                                 <th>AÇÕES</th>
                             </tr>
 
                             </thead>
 
-                            <tbody name="tbOrcamentoFreteBody" id="tbOrcamentoFreteBody">
+                            <tbody id="tbPedidoFreteBody">
 
                             <tr>
-                                <td>001</td>
-                                <td>FUNCIONARIO 001</td>
-                                <td>ADMINISTRADOR</td>
-                                <td>INTERNO</td>
-                                <td>FUNC01</td>
-                                <td>01/01/2003</td>
-                                <td>SIM</td>
+                                <td>0001</td>
+                                <td>FRETE DE 500KG DE FARINHA DE SOJA</td>
+                                <td>21/09/2019</td>
+                                <td>CLIENTE 002</td>
+                                <td>REPRESENTAÇÃO 005</td>
+                                <td>FUNCIONARIO 007</td>
+                                <td>456,00</td>
                                 <td>
-                                    <a role="button" class="btn btn-sm btn-primary" href="/orcamento/frete/detalhes/001">DETALHES</a>
+                                    <a role="button" class="btn btn-sm btn-primary" href="/pedido/frete/detalhes/001">DETALHES</a>
                                     <a role="button" class="btn btn-sm btn-danger" href="javascript:remover(001);">REMOVER</a>
                                 </td>
                             </tr>
@@ -235,8 +235,8 @@
                         <div class="col-sm-4"></div>
 
                         <div class="col-sm-4">
-                            <label for="btNovoOrcamentoFrete">&nbsp;</label>
-                            <a name="btNovoOrcamentoFrete" id="btNovoOrcamentoFrete" class="btn btn-success" style="width: 100%;" href="/orcamento/frete/novo">NOVO ORÇAMENTO</a>
+                            <label for="btNovoPedidoFrete">&nbsp;</label>
+                            <a name="btNovoPedidoFrete" id="btNovoPedidoFrete" class="btn btn-success" style="width: 100%;" href="/pedido/frete/novo">NOVO PEDIDO</a>
                         </div>
 
                         <div class="col-sm-4"></div>

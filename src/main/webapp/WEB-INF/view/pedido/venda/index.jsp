@@ -3,18 +3,16 @@
 <html lang="pt">
 
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Frete - Orçamento - Sistema de Controle de Representações</title>
+        <title>Venda - Pedido - Sistema de Controle de Representações</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css" />
 
         <!-- CSS Personalizado -->
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
     </head>
 
     <body>
@@ -166,7 +164,7 @@
             <!-- Card titulo pagina -->
             <div class="card-title">
                 <div class="card-title-container" style="text-align: center;">
-                    <h4><b>SCR - Orçamentos de Frete</b></h4>
+                    <h4><b>SCR - Pedidos de Venda</b></h4>
                 </div>
             </div>
             <!-- Fim card titulo pagina -->
@@ -189,16 +187,17 @@
             </div>
 
             <div class="fieldset-card">
-                <div class="fieldset-card-legend" style="width: 140px;">Dados dos Orçamentos</div>
+                <div class="fieldset-card-legend" style="width: 140px;">Dados dos Pedidos</div>
 
                 <div class="fieldset-card-container">
                     <div class="table-container">
-                        <table name="tbListaOrcamentoFrete" id="tbListaOrcamentoFrete" class="table table-striped table-hover">
+                        <table name="tbListaPedidoVenda" id="tbListaPedidoVenda" class="table table-striped table-hover">
 
                             <thead>
 
                             <tr>
                                 <th>ID</th>
+                                <th>DESCRIÇÃO</th>
                                 <th>DATA</th>
                                 <th>CLIENTE</th>
                                 <th>REPRESENTAÇÃO</th>
@@ -210,19 +209,20 @@
 
                             </thead>
 
-                            <tbody name="tbOrcamentoFreteBody" id="tbOrcamentoFreteBody">
+                            <tbody name="tbListaPedidoVendaBody" id="tbListaPedidoVendaBody">
 
                             <tr>
-                                <td>001</td>
-                                <td>FUNCIONARIO 001</td>
-                                <td>ADMINISTRADOR</td>
-                                <td>INTERNO</td>
-                                <td>FUNC01</td>
-                                <td>01/01/2003</td>
-                                <td>SIM</td>
+                                <td>0001</td>
+                                <td>PEDIDO DE 60 SACOS DE FARELO DE SOJA</td>
+                                <td>20/09/2019</td>
+                                <td>CLIENTE 001</td>
+                                <td>REPRESENTAÇÃO 001</td>
+                                <td>FUNCIONARIO 002</td>
+                                <td>8500,00</td>
+                                <td>521,00</td>
                                 <td>
-                                    <a role="button" class="btn btn-sm btn-primary" href="/orcamento/frete/detalhes/001">DETALHES</a>
-                                    <a role="button" class="btn btn-sm btn-danger" href="javascript:remover(001);">REMOVER</a>
+                                    <a role="button" class="btn btn-xs btn-primary" href="/pedido/venda/detalhes/001">DETALHES</a>
+                                    <a role="button" class="btn btn-xs btn-danger" href="#">REMOVER</a>
                                 </td>
                             </tr>
 
@@ -235,8 +235,7 @@
                         <div class="col-sm-4"></div>
 
                         <div class="col-sm-4">
-                            <label for="btNovoOrcamentoFrete">&nbsp;</label>
-                            <a name="btNovoOrcamentoFrete" id="btNovoOrcamentoFrete" class="btn btn-success" style="width: 100%;" href="/orcamento/frete/novo">NOVO ORÇAMENTO</a>
+                            <a role="button" id="btNovoPedido" class="btn btn-success" style="width: 100%;" href="/pedido/venda/novo">NOVO PEDIDO</a>
                         </div>
 
                         <div class="col-sm-4"></div>
@@ -255,12 +254,6 @@
         <script type="text/javascript" src="/lib/jquery/jquery.js"></script>
         <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/js/site.js"></script>
-
-        <script type="text/javascript">
-            function remover(id) {
-
-            }
-        </script>
 
     </body>
 

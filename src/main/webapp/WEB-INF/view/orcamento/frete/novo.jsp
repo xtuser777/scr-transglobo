@@ -84,10 +84,10 @@
                                 <a href="#" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pedido <span class="caret"></span></a>
                                 <!-- Popup botao pedido -->
                                 <ul class="dropdown-menu">
-                                    <li><a href="../../pedido/venda/novo.html">Venda</a></li>
-                                    <li><a href="../../pedido/frete/novo.html">Frete</a></li>
-                                    <li><a href="../../pedido/status/index.html">Alterar status</a></li>
-                                    <li><a href="../../pedido/autorizacao/index.html">Autorizar Carregamento</a></li>
+                                    <li><a href="/pedido/venda/index">Venda</a></li>
+                                    <li><a href="/pedido/frete/index">Frete</a></li>
+                                    <li><a href="/pedido/status/index">Alterar status</a></li>
+                                    <li><a href="/pedido/autorizar/index">Autorizar Carregamento</a></li>
                                 </ul>
                                 <!-- Fim popup botao pedido -->
                             </li>

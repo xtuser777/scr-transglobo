@@ -176,34 +176,38 @@
                 <div class="fieldset-card-legend" style="width: 110px;">Dados do pedido</div>
                 <div class="fieldset-card-container">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <label for="btSelCliente">Cliente:</label>
-                                    <button name="btSelCliente" id="btSelCliente" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
-                                </div>
-                            </div>
+                        <div class="col-sm-3">
+                            <label for="dtPedido">Data do Pedido:</label>
+                            <input type="date" name="dtPedido" id="dtPedido" class="form-control" style="width: 100%;" />
                         </div>
 
-                        <div class="col-sm-6">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <label for="btSelRepresentacao">Representação:</label>
-                                    <button name="btSelRepresentacao" id="btSelRepresentacao" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-sm-9">
                             <label for="txDescricao">Descrição:</label>
                             <input type="text" name="txDescricao" id="txDescricao" class="form-control" style="width: 100%;" />
                         </div>
+                    </div>
 
-                        <div class="col-sm-3">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label for="btSelVendador">Vendedor:</label>
+                            <button name="btSelVendedor" id="btSelVendador" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                        </div>
+
+                        <div class="col-sm-4">
                             <label for="btSelOrcamento">Orçamento:</label>
                             <button name="btSelOrcamento" id="btSelOrcamento" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="btSelCliente">Cliente:</label>
+                            <button name="btSelCliente" id="btSelCliente" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="btSelRepresentacao">Representação:</label>
+                            <button name="btSelRepresentacao" id="btSelRepresentacao" class="btn btn-default" style="width: 100%;">SELECIONAR</button>
                         </div>
                     </div>
                 </div>
